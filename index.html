@@ -509,13 +509,15 @@ function toggleWidth(el,width,zind){
 document.querySelector('#abt_app').onclick = function(){
   toggleWidth(sideBar,0,-1)
   modal.style.display = 'block'
-  document.querySelector('.disclaimer-body').innerHTML = '<div>This app was developed by Tee Inc. By using our product, you agrer to the terms of use and privacy policy.</div>' + '<div>Our contact: Email: codinglabz20@gmail.com</div>'
+  document.querySelector('.disclaimer-body').innerHTML = '<div>This app was developed by Tee Inc. By using our product, you agree to the terms of use and privacy policy.</div>' + '<div>Our contact: Email: codinglabz20@gmail.com</div>'
   document.querySelector('#closebtn').innerHTML = 'close'
   document.querySelector('#closebtn').onclick = function(){
     document.querySelector('.side-bar-bg').style.width = '0'
     document.querySelector('.modal').style.display = 'none'
   }
 }
+
+
 }
 </script>
 </body>
