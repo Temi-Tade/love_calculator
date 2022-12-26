@@ -83,7 +83,7 @@ window.addEventListener('load',function(){
 				</div>
 			`).display()
 			modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center;
-			font - weight: bold;'>CREDITS</h3>`
+			font - weight: bold;'>CONTACT</h3>`
 			modalbg.querySelector('#icon').innerHTML = `<i class="fas fa-phone-alt"></i>`
 	})
 	
