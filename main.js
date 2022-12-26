@@ -84,7 +84,7 @@ window.addEventListener('load',function(){
 			`).display()
 			modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center;
 			font - weight: bold;'>CREDITS</h3>`
-			modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-thumbs-up'>`
+			modalbg.querySelector('#icon').innerHTML = `<i class="fas fa-phone-alt"></i>`
 	})
 	
 	document.querySelector('#priv_pol').addEventListener('click', function(){
@@ -92,7 +92,7 @@ window.addEventListener('load',function(){
 			We have a strong user privacy policy; by using our product, you agree to the terms of use and you've given us access to your device's browser local storage.<br>
 			`).display()
 			modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center'>PRIVACY POLICY`
-			modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-user-shield'>`
+			modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-user-shield'></i>`
 		})
 		
 	document.querySelector('#feedback_btn').addEventListener('click', function(){
@@ -105,7 +105,7 @@ window.addEventListener('load',function(){
 		`).display()
 		modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center;
 					font - weight: bold;'>OTHER APPS</h3>`
-		modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-plus-circle'>`
+		modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-plus-circle'></i>`
 	})
 	
 })
