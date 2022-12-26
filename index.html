@@ -6,356 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Love compatibility tester 1.0</title>
-
-<style>
-*{
-  line-height: 1.75;
-  box-sizing: border-box
-}
-
-div.container{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.side-bar-bg{
-  background: #33333399;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  max-width: 900px;
-}
-
-.side-bar{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 0;
-  overflow: hidden;
-  max-width: 900px;
-  height: 100%;
-  background: #fff;
-  box-shadow: 1px 1px 6px #ccc;
-  transition: all .5s linear;
-}
-
-.side-bar h4{
-  text-align: center;
-  background: #333;
-  color: #fff;
-  margin: 0
-}
-
-.side-bar ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.side-bar button{
-  display: block;
-  width: 100%;
-  margin: 7px 0;
-  background: transparent;
-  border: none;
-  text-align: left;
-  font-size: 0.95rem;
-  border-bottom: 0.75px solid #999;
-  padding: 7px 0;
-  padding-left: 7px;
-}
-
-.side-bar .side-bar-footer{
-  position: fixed;
-  bottom: 0;
-  width: inherit;
-  text-align: center;
-  background: #333;
-  color: #fff;
-}
-
-.option-bar{
-  position: absolute;
-  top: 15px;
-  background: transparent;
-  padding-top: 6px;
-  border: none;
-  border-radius: 7px;
-  transition: .5s
-}
-
-.option-bar:focus{
-  box-shadow: 0px 0px 1px 3px #aaa;
-} 
-
-.bar{
-  background: #fff;
-  width: 30px;
-  height: 2.5px;
-  display: flex;
-  margin-bottom: 6px
-}
-
-.header{
-  background: #333;
-  margin: 0;
-  color: #fff;
-  padding-left: 7px
-}
-
-.header h1{
-  margin: 0;
-  padding: 0;
-  margin-left: 50px
-}
-
-.header small{
-  font-style: italic;
-}
-
-.top-msg{
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  color: #fff;
-  position: fixed;
-  bottom: 0;
-  max-height: 100px;
-  opacity: 1;
-  transition: 0.5s;
-  overflow-y: hidden;
-  font-size: 1.2rem;
-}
-
-.err-msg {
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  color: #fff;
-  position: fixed;
-  bottom: 0;
-  max-height: 100px;
-  opacity: 1;
-  transition: 0.5s;
-  overflow-y: hidden;
-  font-size: 1.2rem;
-}
-
-.message-box{
-  text-align: justify;
-  width: 400px;
-  margin: auto;
-  box-shadow: 1px 1px 6px #ccc;
-  padding: 12px;
-}
-
-.message-box button{
-  display: block;
-  background: #333;
-  border: none;
-  font-weight: 650;
-  color: #fff;
-  padding: 7px;
-  font-size: 1rem;
-  margin: auto;
-  text-transform: uppercase;
-}
-
-div.form{
-  width: 350px;
-  margin: 5px auto;
-  padding: 5px;
-  display: none;
-}
-
-div.form input{
-  background: #cccccc66;
-  border: none;
-  height: 40px;
-  border-bottom: 2px solid #333;
-  display: block;
-  margin: 7px auto;
-  width: 275px;
-  margin: 13px auto;
-  padding: 7px;
-  transition: .55s;
-}
-
-div.form input:focus{
-  outline: none;
-  border-bottom: 2px solid #14FF6D
-}
-
-button:focus{
-  outline: none;
-}
-
-div.form button{
-  display: block;
-  margin: auto;
-  padding: 7px;
-  color: #fff;
-  background: #333;
-  text-transform: uppercase;
-  border: none;
-  font-weight: 650;
-  font-size: 1rem
-}
-
-.output{
-  opacity: 0;
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
-
-.meter{
-  background: green;
-  width: 0;
-  height: 15px;
-  transition: 2s;
-  border-radius: 6px;
-  margin: 0;
-}
-
-.text{
-  margin: 0 5px 0 5px;
-}
-
-.actual_text{
-  text-align: center;
-  display: block;
-  width: 200px;
-  margin: auto;
-  font-size: 3.5rem;
-  font-weight: bolder;
-}
-
-.modal{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(20,20,20,0.5);
-  padding-top: 150px
-}
-
-.disclaimer{
-  width: 300px;
-  font-size: 1.25rem;
-  padding: 12px;
-  margin: auto;
-  transition: 1s;
-  background: rgba(255,255,255);
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
-  border-radius: 6px
-}
-
-.disclaimer h2{
-  margin: 0;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.disclaimer button{
-  text-transform: uppercase;
-  background: #333;
-  color: #fff;
-  font-weight: 650;
-  padding: 8px;
-  display: block;
-  margin: auto;
-  border: none;
-  font-size: 1rem
-}
-
-.disclaimer p{
-  text-align: justify
-}
-
-.disclaimer .disclaimer-footer{
-  text-align: center;
-}
-
-#retrybtn{  
-  text-transform: uppercase;
-  background: #333;
-  color: #fff;
-  font-weight: 650;
-  padding: 8px;
-  display: none;
-  border: none;
-  font-size: 0.85rem;
-  float: right;
-  margin: 10px;
-}
-</style>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/loader.css">
+  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/fontawesome.min.css">
 </head>
 
 <body>
   <div class="container">
-    
-    <div class="side-bar-bg">
-    <div class="side-bar">
-      <h4>Settings</h4>
-      <ul>
-        
-        <li><button id="abt_app">About</button></li>
-        <li><button>Credits</button></li>
-        <li><button>Privacy policy</button></li>
-      </ul>
-    
-    </div>
-    </div>
+  	
+  	<div class="modal-bg">
+  		<div class="modal">
+  			<p id='icon' style='text-align:center; font-size: 2rem'></p>
+  			<div class="modal-head"></div>
+  			<div class="modal-body"></div>
+  		</div>
+  	</div>
     
     <div class="header">
       
       <button class="option-bar" id="sidebarbtn">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <i style="color: white; font-size: 30px" class="fas fa-bars"></i>
       </button>
-      
+     <div class="side-bar">
+     <ul>
+       <li><button id="abt_app"><i class="fas fa-info"></i>&nbsp;&nbsp; About</button></li>
+       <li><button id="credit"><i class="fas fa-thumbs-up"></i>&nbsp;
+       Contact</button></li>
+       <li><button id="priv_pol"><i class="fas fa-user-shield"></i>&nbsp;Privacy policy</button></li>
+       <li><button id="feedback_btn"><i class="fas fa-envelope"></i>&nbsp; Feedback</button></li>
+       <li><button id="more_btn"><i class="fas fa-plus-circle"></i>&nbsp;More apps</button></li>
+     </ul>
+    </div>
+    
       <h1>Love Tester</h1>
       <small>...The ultimate love test...</small>
-          </div>
-    
-    <div class="top-msg"></div>
-    <div class="err-msg"></div>
-    
-  <div class="main-area">  
-   <div class="modal">
-    <div class="disclaimer">
-      <div class="disclaimer-head">
-        <h2>disclaimer</h2>
-      </div>
-      <div class="disclaimer-body">
-        <p>This is just for fun. We are in no way responsible for any misunderstanding or issues caused by this... :) <br> By proceeding, you agree to the terms and conditions of the service</p>
-      </div>
-      <button type="button" class="close-disclaimer" id="closebtn">okay, got it</button>
-      <div class="disclaimer-footer">
-        <small>&copy; 2022, Tee Inc.</small>
-      </div>
-    </div>
-   </div>
-   
-   
-   
-   <div class="message-box">
-     <p class="message">Hi Lovers, ever wanted to know your stand in your partner's life or how much you'd be compatible with someone. Look no further! I am an Artificial Intelligence programmed to do just that.
-     <cite><strong>Just a reminder, I am in no way responsible for the aftermath of this. This is just for fun.</strong></cite>Without further ado, let's get started ladies and gentlemen, shall we?</p>
-     <button class="startbtn" id="getstarted">get started</button>
-   </div>
+     </div>
    
     <div class="form">
+    	<form id="form" autocomplete="off">
       <div class="input _field">
         <input type="text" class="name" id="person1" placeholder="Input the guy's name here...">
       </div>
@@ -365,9 +54,10 @@ div.form button{
       </div>
       
       <div class="submit_button">
-        <button id="btn" type="button">check compatibility</button>
+        <button id="btn" type="submit"><i class="fas fa-heart"></i>check compatibility<i class="fas fa-heart"></i></button>
       </div>
-    </div>
+    	</form>
+    </div> 
     
     <div class="output">
       <div class="text"></div>
@@ -375,148 +65,12 @@ div.form button{
     </div>
    
      <div class="meter"></div>
-     <button id="retrybtn"> <<< try another test</button>
+     <button id="retrybtn"><i class="fas fa-redo"></i> try another test</button>
    </div>
   </div>
-  <script>
-window.onload = function(){
-  const btn = document.querySelector('#btn')
-  const closebtn = document.querySelector('#closebtn')
-  const disclaimer = document.querySelector('.disclaimer')
-  const modal = document.querySelector('.modal')
-  const startbtn = document.querySelector('#getstarted')
-  const topMsg = document.querySelector('.top-msg')
-  const errMsg = document.querySelector('.err-msg')
-  const retryBtn = document.querySelector('#retrybtn')
-  const sideBar = document.querySelector('.side-bar')
 
-document.querySelector('#sidebarbtn').onclick = function(){ 
-  toggleWidth(sideBar, '250px','1')
-  toggleWidth(document.querySelector('.side-bar-bg'),'100%')
-}
-
-window.onclick = function(){
-  if (event.target === document.querySelector('.side-bar-bg')) {
-    toggleWidth(document.querySelector('.side-bar-bg'),'0')
-    toggleWidth(sideBar,'0','-1')
-  }
-}
-
-retryBtn.onclick = function(){
-  document.querySelector('.form').style.display = 'block'
-  document.querySelector('.output').style.display = 'none'
-  this.style.display = 'none'
-  document.querySelector('.meter').style.width = '0'
-  let guyName = document.getElementById('person1')
-  let ladyName = document.getElementById('person2')
-  guyName.value = ''
-  ladyName.value = ''
-  guyName.disabled = false
-  ladyName.disabled = false
-}
-
-startbtn.onclick = function(){
-  document.querySelector('.message-box').style.display = 'none'
-  document.querySelector('.output').style.display = 'none'
-  infoMessage('Please wait while I gather the necessary resources. Just a moment please...','green')
-  setTimeout(displayForm,5000)
-}
-
-closebtn.onclick = function(){
-  modal.style.display = 'none'
-}
-
-btn.onclick = function() {
-  let guyName = document.getElementById('person1')
-  let ladyName = document.getElementById('person2')
-  let names = document.querySelectorAll('.name')
-  for (let i = 0; i < names.length; i++) {
-    if(names[i].value === '') {
-      errorMessage('Names cannot be empty','red')
-      return
-    }else if(names[i].value.length <= 2 || names[i].value.length >= 13){
-      errorMessage('Names should be between 2 and 12 characters in length','red')
-      return
-    }else if(ladyName.value === guyName.value){
-      errorMessage('Names should not be the same','red')
-      return
-    }
-  }
-  let arr = []
-  arr.push(guyName.value, ladyName.value)
-  let str = arr.join('')
-  for (let i = 0; i < str.length; i++) {
-    if (isNaN(str[i]) === false) {
-      errorMessage('Input cannot contain numbers or spaces','red')
-      return
-    }
-  }
-  guyName.disabled = true
-  ladyName.disabled = true
-  let value = getRandInt(0,100)
-  let output = document.querySelector('.output')
-  let meter = document.querySelector('.meter')
-  let text = document.querySelector('.text')
-  let act_txt = document.querySelector('.actual_text')
-  infoMessage('Please wait while I run the algorithm...','green')
-  
-  setTimeout(function(){
-    document.querySelector('.form').style.display = 'none'
-  output.style.opacity = '1'
-  text.innerHTML = 'Dear ' +  names[0].value + ' and ' + names[1].value + ', your Love test compability result is ' + '<br>'
-  act_txt.innerHTML = value + '%'
-  meter.style.width = value / 100 * 100 + '%'
-  
-  document.querySelector('.output').style.display = 'block'
-  //meter.style.opacity = '1'
-  retryBtn.style.display = 'block'
-  },4000)
-}
-
-function displayForm(){
-  document.querySelector('.form').style.display = 'block'
-}
-
-function infoMessage(msg,bgcolor){
-  topMsg.innerHTML = msg;
-  topMsg.style.background = bgcolor;
-  setTimeout(function(){
-    topMsg.style.maxHeight = '0'
-  },3500)
-  topMsg.style.maxHeight = '100px'
-}
-
-function errorMessage(msg,bgcolor){
-  errMsg.innerHTML = msg;
-  errMsg.style.background = bgcolor;
-  setTimeout(function(){
-    errMsg.style.maxHeight = '0'
-  },3500)
-  errMsg.style.maxHeight = '100px'
-  //errMsg.innerHTML = ''
-}
-
-
-function getRandInt(min,max){
-  return Math.floor(Math.random()*max) + min
-}
-
-function toggleWidth(el,width,zind){
-  el.style.width = width
-  el.style.zIndex = zind
-}
-  
-document.querySelector('#abt_app').onclick = function(){
-  toggleWidth(sideBar,0,-1)
-  modal.style.display = 'block'
-  document.querySelector('.disclaimer-body').innerHTML = '<div>This app was developed by Tee Inc. By using our product, you agrer to the terms of use and privacy policy.</div>' + '<div>Our contact: Email: codinglabz20@gmail.com</div>'
-  document.querySelector('#closebtn').innerHTML = 'close'
-  document.querySelector('#closebtn').onclick = function(){
-    document.querySelector('.side-bar-bg').style.width = '0'
-    document.querySelector('.modal').style.display = 'none'
-  }
-}
-}
-</script>
+	<script defer src='/js/ui.js'></script>
+	<script defer src='/js/main.js'></script>
 </body>
 </html>
+ 

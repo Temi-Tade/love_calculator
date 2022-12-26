@@ -1,0 +1,257 @@
+:root{
+	--bg: #fff;
+	--btnbg: #006AFF
+}
+
+::placeholder{
+	color: var(--bg);
+}
+
+::selection{
+	background: var(--btnbg);
+	color: #fff
+}
+
+*{
+  line-height: 1.75;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: .5px
+}
+
+body{
+	position: relative;
+	background: #333;
+}
+
+.side-bar{
+	position: fixed;
+  width: 15rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 1px 1px 6px #333;
+  transition: all .5s linear;
+  right: 5px;
+  top: -500px;
+  opacity: 0;
+}
+
+.side-bar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-bar button{
+  display: block;
+  width: 100%;
+  margin: 7px 0;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 0.75px solid #999;
+  padding: 7px 0;
+  padding-left: 7px;
+}
+
+.option-bar:focus{
+	background: #eee;
+}
+
+.option-bar:focus + .side-bar{
+	top: 0;
+	opacity: 1;
+}
+
+.option-bar{
+  position: absolute;
+  top: 15px;
+  background: transparent;
+  padding-top: 6px;
+  border: none;
+  border-radius: 7px;
+  transition: .5s;
+  right: 15px;
+  padding: 4px;
+}
+
+.bar{
+  background: #fff;
+  width: 30px;
+  height: 2.5px;
+  display: flex;
+  margin-bottom: 6px
+}
+
+.header{
+  background: var(--btnbg);
+  margin: 0;
+  color: #fff;
+  padding-left: 7px
+}
+
+.header h1{
+  margin: 0;
+  padding: 0;
+  margin-left: 5px
+}
+
+.header small{
+  font-style: italic;
+}
+
+.message-box{
+  text-align: justify;
+  width: 400px;
+  margin: auto;
+  box-shadow: 1px 1px 6px #ccc;
+  padding: 12px;
+}
+
+.message-box button{
+  display: block;
+  background: var(--btnbg);
+  border: none;
+  font-weight: 650;
+  color: #fff;
+  padding: 7px;
+  font-size: 1rem;
+  margin: auto;
+  text-transform: uppercase;
+  border-radius: .75rem;
+  width: 100%
+}
+
+div.form{
+  width: 100%;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+div.form input{
+  background: transparent;
+  height: 3rem;
+  border: 1.2px solid #eee;
+  display: block;
+  width: 60%;
+  margin: 2rem auto;
+  padding: 7px;
+  transition: .55s;
+  border-radius: .75rem;
+  font-size: 1rem;
+  color: #eee;
+}
+
+div.form input:focus{
+  outline: none;
+  width: 70%;
+	box-shadow: 0 0 0 4px var(--btnbg);
+}
+
+button:focus{
+  outline: none;
+}
+
+div.form button {
+	display: block;
+	margin: auto;
+	padding: 7px;
+	color: #fff;
+	background: var(--btnbg);
+	text-transform: uppercase;
+	border: none;
+	font-weight: 650;
+	font-size: 1rem;
+	width: 75%;
+	border-radius: .75rem;
+}
+
+.output{
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.meter{
+  background: var(--btnbg);
+  width: 0;
+  height: 15px;
+  transition: 2s;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.text{
+  margin: 0 5px 0 5px;
+  color: #eee;
+}
+
+.actual_text{
+  text-align: center;
+  display: block;
+  width: 200px;
+  margin: auto;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: #eee;
+}
+
+#retrybtn{  
+  text-transform: uppercase;
+  background: var(--btnbg);
+  color: #fff;
+  font-weight: 650;
+  padding: .5rem;
+  display: none;
+  border: none;
+  font-size: 0.85rem;
+  border-radius: 16px;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+}
+
+.modal-bg {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #33333377;
+	width: 100%;
+	padding-top: 12rem;
+	z-index: 100;
+	font-size: 1.15rem
+}
+
+.modal{
+	box-shadow: 0 0 4px #333;
+}
+
+.modal .links{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center
+	
+}
+
+.modal a{
+	font-size: 3rem;
+	display: inline-block;
+}
+
+#closebtn {
+	display: block;
+	width: 100%;
+	height: 2.75rem;
+	border: none;
+	background: var(--btnbg);
+	border-radius: 12px;
+	font-weight: 700;
+	color: #fff;
+	font-size: 1.2rem;
+}
