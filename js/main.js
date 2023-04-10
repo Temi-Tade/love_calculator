@@ -3,7 +3,7 @@ window.addEventListener('load',function(){
   const retryBtn = document.querySelector('#retrybtn')
   const modalbg = document.querySelector('.modal-bg')
   
-  new Message('info',`This is just for fun, so don\'t take anything too seriously😉.<br>I am an Artificial Intelligence that runs an algorithm that calculates the love compatibility between you and partner (or potential partner)😏. Just a reminder, I am in no way responsible for the aftermath of this. Without further ado, let\'s get started ladies and gentlemen, shall we?
+  new Message('info',`This is just for fun, so don\'t take anything too seriously... Results may vary 😏
   `).display()
 
 	retryBtn.onclick = function(){
@@ -83,8 +83,8 @@ window.addEventListener('load',function(){
 				</div>
 			`).display()
 			modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center;
-			font - weight: bold;'>CONTACT</h3>`
-			modalbg.querySelector('#icon').innerHTML = `<i class="fas fa-phone-alt"></i>`
+			font - weight: bold;'>CREDITS</h3>`
+			modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-thumbs-up'>`
 	})
 	
 	document.querySelector('#priv_pol').addEventListener('click', function(){
@@ -92,7 +92,7 @@ window.addEventListener('load',function(){
 			We have a strong user privacy policy; by using our product, you agree to the terms of use and you've given us access to your device's browser local storage.<br>
 			`).display()
 			modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center'>PRIVACY POLICY`
-			modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-user-shield'></i>`
+			modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-user-shield'>`
 		})
 		
 	document.querySelector('#feedback_btn').addEventListener('click', function(){
@@ -100,12 +100,15 @@ window.addEventListener('load',function(){
 	})
 		
 	document.querySelector('#more_btn').addEventListener('click', function(){
-		new Message('info', `Coming soon...<br>
-		Our other apps are under upgrades, links to them will be placed here as soon as updates are over.
+		new Message('info', `
+		<h3>Other products by the developer</h3>
+		<ul type='none'>
+		<li><a href='https://temi-tade.github.io/countdown-timer/' style='color: var(--btnbg); text-decoration: none'>Countdown timer</a></li>
+		</ul>
 		`).display()
 		modalbg.querySelector('.modal-head').innerHTML = `<h3 style='text-align: center;
 					font - weight: bold;'>OTHER APPS</h3>`
-		modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-plus-circle'></i>`
+		modalbg.querySelector('#icon').innerHTML = `<i class='fas fa-plus-circle'>`
 	})
 	
 })

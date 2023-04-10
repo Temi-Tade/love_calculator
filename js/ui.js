@@ -1,6 +1,5 @@
 const modalbg = document.querySelector('.modal-bg')
 
-
 class Message{
   constructor(type,message){
     this.type = type
